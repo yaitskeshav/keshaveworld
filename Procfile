@@ -1,1 +1,1 @@
-web: waitress-serve --listen=$PORT kew.wsgi:application
+web: waitress-serve --.listen(process.env.PORT || 5000) kew.wsgi:application
