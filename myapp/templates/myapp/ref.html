@@ -1,0 +1,51 @@
+{% extends 'myapp/base.html' %}
+ {% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+ 
+
+    <title> {% block title %}Reference Books{% endblock title %} </title>
+</head>
+
+<body>
+  {% block body %}
+
+
+  <script>
+        window.addEventListener('load', chk);
+        function chk()
+            {
+                if (localStorage.getItem('name')=="" || (localStorage.getItem('name')==null) )
+                { 
+                  
+                    
+                    window.location = "/keshav_e_world";
+                }
+              }</script> 
+<div class="row row-cols-1 row-cols-md-2">
+    <div class="card">
+        <img src="{% static 'myapp/images/java ref.png' %} " class="card-img-top my-4 mx-auto" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Java Complete Reference</h5>
+            <p class="card-text"></p>
+            <a style="margin-left: 30%;"  target=".blank" href="https://1drv.ms/b/s!Aukyd_q2ha0SgzKK8CPEegj6es5d?e=bDWoYH" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'myapp/images/gtu maths.png' %}" class="card-img-top mx-auto my-4" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">GTU Maths 2018 (83.9 MB)</h5>
+            <p class="card-text"></p>
+            <a style="margin-left: 30%;"  target=".blank" href="https://1drv.ms/b/s!Aukyd_q2ha0SgzMiH0DkaZdXoGyP?e=LJ71GT" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% extends 'myapp/base.html' %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>{% block title %}EVS{% endblock title %}</title>
+</head>
+
+<body>
+
+    {% block body %}
+    <script>
+        window.addEventListener('load', chk);
+        function chk()
+            {
+                if (localStorage.getItem('name')=="" || (localStorage.getItem('name')==null) )
+                { 
+                  
+                    
+                    window.location = "/keshav_e_world";
+                }
+              }</script> 
+    
+
+    <div style="padding-left: 2%; padding-top:2%" ;> <iframe width="400" height="315"
+            src="https://www.youtube.com/embed/MQuWlTDDecs" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/kOGqRMwAC6U" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/-zoloMKOKxc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+
+    {% endblock body %}
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{% extends 'myapp/base.html' %}
+<!doctype html>
+<html lang="en">
+
+<head>
+ 
+
+  <title>{% block title %}Workshops{% endblock title %} </title>
+</head>
+
+<body>
+{% block body %} 
+  <script>
+        window.addEventListener('load', chk);
+        function chk()
+            {
+                if (localStorage.getItem('name')=="" || (localStorage.getItem('name')==null) )
+                { 
+                  
+                    
+                    window.location = "/keshav_e_world";
+                }
+              }</script> 
+ <div>
+    <embed src="https://www.unixtutorial.org/basic-unix-commands" style="width:375px; height: 700px;"type="">
+  </div>
+
+{% endblock body %}
+
+</body>
+
+</html>

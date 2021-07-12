@@ -1,0 +1,187 @@
+{% extends 'myapp/base.html' %}
+ {% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+ 
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Tourney:ital,wght@1,900&display=swap" rel="stylesheet">
+<title>{% block title %}Home{% endblock title %} </title>
+</head>
+  <body {% block color %} style="background-color:#414b4a;"{% endblock color %}>
+{% block body %}
+
+<script>
+
+  
+  window.addEventListener('load', chk);
+  function chk()
+      {
+          if ((localStorage.getItem('name')=="" || (localStorage.getItem('name')==null)) || (localStorage.getItem('city')=="" || (localStorage.getItem('city')==null)) ||(localStorage.getItem('email')=="" || (localStorage.getItem('email')==null)) )
+          { console.log("loaded");
+          alert("Enter all Details")
+
+          document.getElementById("verify").style.display="";
+          bool=false;
+          
+          
+          
+            
+          }
+        }
+          function getdetails()
+          {
+            
+           
+           let uname=document.getElementById("name").value;
+            let ucity=document.getElementById("city").value;
+            let uemail=document.getElementById("email").value;
+            console.log(uname);
+            console.log(ucity);
+            localStorage.setItem('name',uname);
+            localStorage.setItem('city',ucity);
+            localStorage.setItem('email',uemail);
+            
+            if (bool==true)
+            {
+              alert("Submitted Succesfully !!") 
+
+            }
+
+            
+        
+          }
+
+          // (B) TOAST MESSAGE
+
+        </script>
+
+
+
+
+      <h1 class=" text-center" style="color: #ff0ff8; font-family: 'Zen Loop', cursive;">Hello Geeks !!
+        <span
+           class="txt-rotate"
+           data-period="2000"
+           data-rotate='[ "Welcome To Keshav-e-World "]'></span>
+      </h1>
+
+    
+
+<br><br>
+<br><br><br><br>
+
+<h1 class=" text-center" style="font-family: 'Zen Tokyo Zoo', cursive;">Your One Stop Solution for 
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "Notes.&#128209;", "Reference Books.&#128218;", "Tech News.&#128512;", "Loot Offer.&#128525;", "Tips & Tricks.&#128515;" ,"New Devices.&#127775;" ]'></span>
+</h1>
+<div id="verify" style="display: none;">
+
+<div class="h2 my-5 text-center text-light" style="font-family: 'Barlow Condensed', sans-serif;"><b> Enter these details to Authorize this Website.</b><br>
+<small class="fs-6 text-success"> Don't Worry. This is one time process only!</small></div>
+
+<div  class=" bg-transparent " style="margin-left: 20%; margin-right: 20%;">
+
+  <form action="" method="post">
+  {% csrf_token %}
+<div class="mb-3 my-5" >
+  <label style="font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Tourney', cursive;" for="exampleFormControlInput1" class="form-label text-danger fw-bolder">Name</label>
+  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" style="font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Tourney', cursive;" class="form-label text-danger fw-bolder">City</label>
+  <input type="text" class="form-control" id="city" name="city" placeholder="City Name">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" style="font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Tourney', cursive;" class="form-label text-danger fw-bolder">Email</label>
+  <input type="text" class="form-control" id="email" name="email" placeholder="Your Email ID">
+</div>
+<div style=" padding-left: 50px;">
+<button class="bg-info text-dark fw-bold text-center" style=" border-radius: 15px;" onclick="getdetails()" type="submit">Submit</button></div>
+</div>
+</form>
+</div>
+<script>var TxtRotate = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+  
+  TxtRotate.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+  
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+  
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  
+    var that = this;
+    var delta = 300 - Math.random() * 100;
+  
+    if (this.isDeleting) { delta /= 2; }
+  
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+  
+    setTimeout(function() {
+      that.tick();
+    }, delta);
+  };
+  
+  window.onload = function() {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+    document.body.appendChild(css);
+  };</script>
+
+
+
+
+
+
+
+<footer>
+
+
+  </footer>
+{% endblock body %}
+
+</body>
+</html>

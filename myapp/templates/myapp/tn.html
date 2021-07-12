@@ -1,0 +1,124 @@
+{% extends 'myapp/base.html' %}
+ {% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title> {% block title %}Tech News{% endblock title %} Keshav e-World</title>
+</head>
+
+<body style="background-color: black">
+ 
+{% block body %}
+
+<script>
+        window.addEventListener('load', chk);
+        function chk()
+            {
+                if (localStorage.getItem('name')=="" || (localStorage.getItem('name')==null) )
+                { 
+                  
+                    
+                    window.location = "/keshav_e_world";
+                }
+              }</script> 
+
+  <div class="card-group">
+    <div class="card">
+      <img src="{% static  'myapp/images/img updates/koo.jfif' %}" class="card-img-top" alt="END-2-END ENCRYPTION ">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-info">Koo App</h5>
+        <p class="card-text">Indian micro-blogging platform Koo has launched its app in Assamese language</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Date : 17-06-2021</small>
+      </div>
+    </div>
+    <div class="card" style="display: flex;">
+      <img src="{% static  'myapp/images/img updates/apple.jfif '%}" class="card-img-top" alt="TWITTER REACTION PICKER">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-info">APPLE</h5>
+        <p class="card-text">Apple CEO Tim Cook Says Android Has 47 Times More Malware Than iOS, Sideloading Will
+          Destroy iPhone Security
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Date : 17-06-2021</small>
+      </div>
+    </div>
+    <div class="card" style="display: flex;  $card-height: 100%">
+      <img src="{% static  'myapp/images/img updates/jio.jfif '%}" class="card-img-top" alt="TWITTER">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-info">Reliance Jio</h5>
+        <p class="card-text ">Reliance Jio continues to maintain leadership in 4G segment with 20.7 megabit per second
+          average download speed, ⁣
+          ⁣
+          while Vodafone Idea topped the chart in upload segment with 6.7 mbps data speed in May, according to the
+          latest data published by the telecom regulator Trai.⁣
+          ⁣
+          Airtel had the lowest average speed of 4.7 mbps according to data published by the Telecom Regulatory
+          Authority of India (Trai) on June 8.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Date: 17-06-2021</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-group">
+    <div class="card">
+      <img src="{% static  'myapp/images/img updates/snap.jfif '%}" class="card-img-top" alt="JIO 5G TRIAL">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-info">SNAPCHAT⁣ </h5>
+        <p class="card-text">Snapchat is working on the ability to share live location with friends</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Date : 17-06-2021</small>
+      </div>
+    </div>
+    <div class="card" style="display: flex;">
+      <img src="{% static  'myapp/images/img updates/pubg.jfif '%}" class="card-img-top" alt="TWITTER FIR">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-info">PUBG</h5>
+        <p class="card-text">After transferring your global PUGB account to Battleground Mobile India, don't login again
+          into PUBG global. In any case you login to PUBG global your ID get ban for 50 Years.⁣</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Date : 17-06-2021</small>
+      </div>
+    </div>
+    <div class="card" style="display: flex;  $card-height: 100%">
+      <img src="{% static  'myapp/images/img updates/americanairlines.jfif '%}" class="card-img-top" alt="APPLE MUSIC">
+      <div class="card-body">
+        <h5 class="card-title fw-bold text-info">AMERICAN AIRLINES</h5>
+        <p class="card-text ">Websites of American Airlines, Southwest Airlines, United Airlines and Delta Air Lines
+          face outage
+
+          More than a thousand user reports indicated problems at Southwest Airlines, with over 400 user reports
+          indicating the same for Delta Air Lines, according to Downdetector.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Date: 17-06-2021</small>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+{% endblock body %}
+    
+</body>
+
+</html>

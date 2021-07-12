@@ -1,0 +1,150 @@
+{% extends 'myapp/base.html' %}
+ {% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}Physics{% endblock title %} Keshav e-World</title>
+</head>
+
+<body>
+{% block body %}
+<script>
+        window.addEventListener('load', chk);
+        function chk()
+            {
+                if (localStorage.getItem('name')=="" || (localStorage.getItem('name')==null) )
+                { 
+                  
+                    
+                    window.location = "/keshav_e_world";
+                }
+              }</script> 
+    
+   
+    <div class="card-group">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/1.0.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ultrasonics (ppt)</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/10g-KaiPuWXsNGGAixHTSSmd2p4378BlH/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/mod3 acoustic.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Acoustic</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/1YHNeJ3gNKPDTWaP9A4m4CFXmRUHsowkx/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/ultrasonic.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ultrasonics Book PDF</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/12-SIEwCWv6548btMCGLDsE4k8NVoHSIC/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="card-group">
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/Detection of ultrasounds.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Methods of Ultrasonic Detection</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/1dcA4WbyozOhCEeWKSiKNTWYHxjlcGkQz/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/1.1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Superconductivity (PPT)</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/1eLpG8kcX4Nq8rGKmncNnHj-MVFXMSNAu/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/mod4  superc.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Superconductivity Book PDF</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/1A6o6r36OSW-Re8-kTxPhdm7tENihEs1e/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-group">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/bcs.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">BCS Theory</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/1X954-byOKNY20Qhai2z4SDQopncH6f1X/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+
+    
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/mod5 laser.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Laser Book PDF</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/1WKvJ51fm_-9m-yx3J_Wi24HPjA5ii-xx/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'myapp/images/physics/optical.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Optical Fibre</h5>
+                <p class="card-text"></p>
+                <a style="margin-left: 30%;" target=".blank"
+                    href="https://drive.google.com/file/d/1dFegtdDXjSZWYJCZ0EgdrYntYvDbsXVZ/view?usp=sharing"
+                    class="btn btn-primary">Download</a>
+            </div>
+        </div>
+    </div>
+
+ <div style="width=40px;" class="alert alert-primary d-flex  alert-dismissible fade show" role="alert">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </svg>
+  <div>
+    None of the notes/study materials belongs to me. All the materials are freely available on internet.
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+{% endblock body %}
+</body>
+
+</html>

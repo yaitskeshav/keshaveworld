@@ -1,0 +1,68 @@
+{% extends 'myapp/base.html' %}
+ {% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+        <title> {% block title %}Contact Me{% endblock title %}</title>
+</head>
+
+<body {% block color %}background="/static/cm bg.jfif"{% endblock color %} >
+  {% block body %}
+
+
+  
+    <section style="text-align: center;">
+    <div class="card mx-auto bg-warning" style="width: 18rem;">
+        <img src="{% static 'myapp/images/mypic3.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Keshav Jha</p>
+        </div>
+      </div>
+<br>
+ <br>
+ <div class="badge bg-dark text-danger text-wrap" style="width: 6rem;">
+  Follow Me On
+</div>
+<br><br>
+<div>
+<a target="_blank" href="https://instagram.com/ya.its_keshav">
+    <span style="font-size: 1.5rem;">
+        <span style="color: indianred;">
+           <i class="fab fa-instagram"></i>
+        </span>
+    </span>
+ </a>
+ &nbsp;&nbsp;
+ <a target="_blank" href="https://facebook.com/keshavjha1504">
+    <span style="font-size: 1.5rem;">
+        <span style="color: indianred;">
+           <i class="fab fa-facebook"></i>
+        </span>
+    </span>
+ </a>
+ &nbsp;&nbsp;
+ <a target="_blank" href="https://www.linkedin.com/in/yaitskeshav/">
+    <span style="font-size: 1.5rem;">
+        <span style="color: indianred;">
+           <i class="fab fa-linkedin"></i>
+        </span>
+    </span>
+ </a>
+
+</div>
+<br>
+<a class="btn btn-outline-info bg-info text-dark  " href="feedback.html" role="button">Give Feedback</a>    
+
+</section>
+
+
+
+<link rel="shortcut icon" href="{% static 'myapp/images/my_pic.jpg'%}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+{% endblock body %}
+</body>
+
+</html>
