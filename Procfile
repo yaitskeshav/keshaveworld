@@ -1,1 +1,1 @@
-web: waitress-serve --.listen(process.env.PORT || 5000) kew.wsgi:application
+web: gunicorn djangoherokuapp.wsgi --log-file -
